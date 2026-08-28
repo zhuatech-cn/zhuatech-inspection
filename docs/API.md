@@ -38,3 +38,7 @@
 | `criticalHazardContained` | boolean | 重大隐患已临时控制 |
 
 接口统一返回 `ApiResponse`；业务冲突使用 HTTP 409，参数错误使用 400，未认证使用 401，无权限使用 403。
+
+## 巡检核心 API
+
+`POST/GET /core/inspection/tasks` 管理任务，`/tasks/{id}/start` 开始执行，`POST/GET /tasks/{id}/points` 管理点位结果，`POST/GET /tasks/{id}/hazards` 管理隐患。隐患依次通过 `/contain`、`/rectify` 和管理员 `/verify` 闭环；管理员 `/tasks/{id}/close` 会强制检查点位完成率和隐患销项状态。
