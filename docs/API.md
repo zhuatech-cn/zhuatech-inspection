@@ -42,3 +42,5 @@
 ## 巡检核心 API
 
 `POST/GET /core/inspection/tasks` 管理任务，`/tasks/{id}/start` 开始执行，`POST/GET /tasks/{id}/points` 管理点位结果，`POST/GET /tasks/{id}/hazards` 管理隐患。隐患依次通过 `/contain`、`/rectify` 和管理员 `/verify` 闭环；管理员 `/tasks/{id}/close` 会强制检查点位完成率和隐患销项状态。
+
+`POST/GET /core/inspection/plans` 管理计划与受控点位，管理员通过 `/admin/core/inspection/plans/{id}/publish` 发布；`POST /core/inspection/plans/{id}/tasks` 只允许从已发布计划生成任务。
