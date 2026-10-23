@@ -1,0 +1,48 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "failurePct": "#5",
+      "daysLeft": "#9",
+      "repeatCount": "#0"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "repeated": "1"
+    },
+    "expected": {
+      "decision": "REVIEW"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "openCapas": "1",
+      "dueDate": "2026-10-22"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "failed": "101"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "checks": "0",
+      "failed": "0"
+    },
+    "expected": {
+      "decision": "REVIEW"
+    },
+    "error": false
+  }
+]

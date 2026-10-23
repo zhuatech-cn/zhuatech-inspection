@@ -1,0 +1,81 @@
+{
+  "slug": "inspection",
+  "title": "重复缺陷与逾期整改复检清单",
+  "fields": [
+    {
+      "key": "id",
+      "label": "记录编号",
+      "type": "ID"
+    },
+    {
+      "key": "checks",
+      "label": "检验项数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "failed",
+      "label": "失败项数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "repeated",
+      "label": "复现失败项",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "openCapas",
+      "label": "未结整改数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "dueDate",
+      "label": "整改截止",
+      "type": "DATE"
+    }
+  ],
+  "columns": [
+    {
+      "key": "failurePct",
+      "label": "失败比例%"
+    },
+    {
+      "key": "daysLeft",
+      "label": "整改剩余天数"
+    },
+    {
+      "key": "repeatCount",
+      "label": "复现缺陷数"
+    }
+  ],
+  "description": "将复现缺陷、检验失败率和未结整改期限结合，明确空检验不能当作通过。",
+  "owner": "上海如静知华信息科技有限公司",
+  "website": "https://www.zhuatech.cn/",
+  "authorization": "商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。",
+  "version": 1,
+  "notes": "输入均须为已获授权的同口径数据。金额固定人民币元；比例为百分数。核算结果只用于复核，未审批、未写库、未发起外部调用，也未触发付款、签名、资料销毁或设备控制。建议不构成法律、安全、会计或碳核证结论。",
+  "sample": {
+    "asOf": "2026-10-23",
+    "records": [
+      {
+        "id": "ITEM-001",
+        "checks": "100",
+        "failed": "5",
+        "repeated": "0",
+        "openCapas": "0",
+        "dueDate": "2026-11-01"
+      }
+    ]
+  }
+}
